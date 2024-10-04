@@ -1,0 +1,76 @@
+Sample Test 1
+
+Input
+4 10 10 100 300 15 15 50 50 10 10 50 50 15 15 100 300 10 10 10 10 20 20 20 20 10 10 50 50 10 10 50 50
+
+Ouput 
+Test case: 1
+Rectangle 1: (10, 10, 100, 300)
+Rectangle 2: (15, 15, 50, 50)
+Is Rectangle 2 contained in Rectangle 1?  true
+Does Rectangle 2 touch Rectangle 1?   false
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 2
+Rectangle 1: (10, 10, 50, 50)
+Rectangle 2: (15, 15, 100, 300)
+Is Rectangle 2 contained in Rectangle 1?  false
+Does Rectangle 2 touch Rectangle 1?   false
+Does Rectangle 2 overlap with Rectangle 1?  true
+ 
+Test case: 3
+Rectangle 1: (10, 10, 10, 10)
+Rectangle 2: (20, 20, 20, 20)
+Is Rectangle 2 contained in Rectangle 1?  false
+Does Rectangle 2 touch Rectangle 1?   true
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 4
+Rectangle 1: (10, 10, 50, 50)
+Rectangle 2: (10, 10, 50, 50)
+Is Rectangle 2 contained in Rectangle 1?  true
+Does Rectangle 2 touch Rectangle 1?   true
+Does Rectangle 2 overlap with Rectangle 1?  false
+
+
+
+Sample Test 2
+
+Input 
+5 0 0 10 10 20 20 5 5 0 0 20 20 5 5 5 5 0 0 20 20 0 0 20 20 0 0 10 10 10 0 5 5 0 0 20 20 15 15 10 10
+
+Output
+Test case: 1
+Rectangle 1: (0, 0, 10, 10)
+Rectangle 2: (20, 20, 5, 5)
+Is Rectangle 2 contained in Rectangle 1?  false
+Does Rectangle 2 touch Rectangle 1?   false
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 2
+Rectangle 1: (0, 0, 20, 20)
+Rectangle 2: (5, 5, 5, 5)
+Is Rectangle 2 contained in Rectangle 1?  true
+Does Rectangle 2 touch Rectangle 1?   false
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 3
+Rectangle 1: (0, 0, 20, 20)
+Rectangle 2: (0, 0, 20, 20)
+Is Rectangle 2 contained in Rectangle 1?  true
+Does Rectangle 2 touch Rectangle 1?   true
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 4
+Rectangle 1: (0, 0, 10, 10)
+Rectangle 2: (10, 0, 5, 5)
+Is Rectangle 2 contained in Rectangle 1?  false
+Does Rectangle 2 touch Rectangle 1?   true
+Does Rectangle 2 overlap with Rectangle 1?  false
+ 
+Test case: 5
+Rectangle 1: (0, 0, 20, 20)
+Rectangle 2: (15, 15, 10, 10)
+Is Rectangle 2 contained in Rectangle 1?  false
+Does Rectangle 2 touch Rectangle 1?   false
+Does Rectangle 2 overlap with Rectangle 1?  true

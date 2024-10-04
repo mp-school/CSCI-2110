@@ -4,7 +4,7 @@
  * 
  */
 
-package A2;
+package Assignments.A2;
 
 import java.util.*;
 public class Collatz{

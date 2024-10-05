@@ -1,92 +1,106 @@
-package Labs.Lab4;
+package Labs.Lab4; // comment out when handing in
+
+// Full Name: [Megan Picard]
+// ID Number: [B00939548]
+// Selection Sort
 
 import java.util.*;
-import java.util.stream.IntStream; // randomizing
+import java.util.stream.IntStream; // for randomizing
+
+//TO DO
+ //prompt the user to enter the value of n
+ //create an integer array of size n with random integers
+ //the range of random integers is from 1 to n
+
+ /* 
+        
+        Time Complexity
+        100 = 0ms
+        1000 = 4ms
+        10000 = 43
+        100000 = 1867ms
+
+ */ 
+ 
 
 public class SelectionSort {
 
-    public static void main(String[] args){
+ public static void main(String[] args){
  
-        Scanner in = new Scanner(System.in);
+    // ui
+    Scanner in = new Scanner(System.in);
+    System.out.println(" ");
+    System.out.println(" - - - Selection Sort - - - ");
+    System.out.println(" ");
+
+    while(true){
+    System.out.println(" ");
+    System.out.print("Input Array Size: ");
     
-        while(true){
-        System.out.println(" - - - Selection Sort - - - ");
-        System.out.println(" ");
-        System.out.print("Input Array Size: ");
-        int n = in.nextInt(); // n array size
+
+    int n = in.nextInt(); // n array size
+
+    // randomized array 0 - n
+    int[]  randomArr = IntStream.generate(() -> new Random().nextInt(n+1)).limit(n).toArray();
+
+
+    // no sort print
+    System.out.print("Non-Sorted Array: "); 
+    System.out.print(Arrays.toString(randomArr)); 
+    System.out.println(" ");
+
+    // excution -> start
+    long startTime, endTime, executionTime;
+    startTime = System.currentTimeMillis();
+
+    sort(randomArr); // call sort method
+
+    // excution  -> end
+    endTime = System.currentTimeMillis();
+    executionTime = endTime - startTime;
+
+    // sort print
+    System.out.println(" ");
+    System.out.print("Sorted Array: "); 
+    System.out.print(Arrays.toString(randomArr)); 
+    System.out.println(" ");
+ 
+
+    // excution time print
+    System.out.println(" ");
+    System.out.print("Excution Time: "); 
+    System.out.print(executionTime); 
+    System.out.print(" ms"); 
+
+    }
+
     
-        // randomized array 0 - n
-        int[]  randomArr = IntStream.generate(() -> new Random().nextInt(n-1)).limit(n-1).toArray();
     
-    
-        // no sort
-        System.out.print("Non-Sorted Array: "); // test
-        System.out.print(Arrays.toString(randomArr)); // test
-        System.out.println(" ");
-    
-        // sort
-    
-        // excution -> start
-        long startTime, endTime, executionTime;
-        startTime = System.currentTimeMillis();
-    
-        sort(randomArr); // call sort method
-    
-        // excution  -> end
-        endTime = System.currentTimeMillis();
-        executionTime = endTime - startTime;
-    
-        System.out.println(" ");
-        System.out.print("Sorted Array: "); 
-    
-        System.out.print("[");
-        for(int i=0; i < randomArr.length; i++){
-            System.out.print(randomArr[i] + ", ");
-        }
-    
-        System.out.print("]");
-        System.out.println(" ");
-    
-    
-        System.out.println(" ");
-        System.out.print("Excution Time: "); // test
-        System.out.print(executionTime); // test
-        System.out.print(" ms"); // test
-        System.out.println(" ");
-       
-        }
     }
 
 
-    public static int[] sort(int[] arr){
+public static int[] sort(int[] arr){ // SORT METHOD
 
-        for (int i = 0; i < arr.length - 1; i++) {
+    for (int i = 0; i < arr.length - 1; i++) {
           
-            // Assume the current position holds
-            // the minimum element
-            int min_idx = i;
+    int minimum = i; // Assume the current element is the minimum
 
-            // Iterate through the unsorted portion
-            // to find the actual minimum
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[min_idx]) {
-                  
-                    // Update min_idx if a smaller element
-                    // is found
-                    min_idx = j;
-                }
-            }
-
-            // If a new minimum is found,
-            // swap it with the element at index i
-            if (min_idx != i) {
-                int temp = arr[i];
-                arr[i] = arr[min_idx];
-                arr[min_idx] = temp;
+    // look for minimum through the array
+        for (int j = i + 1; j < arr.length; j++) { //for j from i+1 to n: // Corrected to go up to n, not n-1
+             if (arr[j] < arr[minimum]) { // If we find a smaller element
+                  minimum = j; // Update min_index to the new minimum element's index
             }
         }
 
-        return arr;
+        // Swap the found minimum element with the element at index i
+        if (minimum != i) {
+            int x = arr[i];
+            arr[i] = arr[minimum];
+            arr[minimum] = x;
+        }
+    }
+
+        return arr; // return sorted array
 
       }
 

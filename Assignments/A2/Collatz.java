@@ -12,24 +12,36 @@ public static void main(String[] args){
 Scanner in = new Scanner(System.in); // scanner class
 //Start with n integer
 //ui
-System.out.print("Enter a positive integer: ");
-//vars
-long n = in.nextLong();
-long startNum = 0;
+
+long n = 1;
 int biggest = 0;
 int biggestN = 0;
+long startNum= 0;
+long startTime = 0, endTime = 0, executionTime = 0;
+
+
+while(n != 0){ 
+
+System.out.print("Enter a positive integer: ");
+//vars
+n = in.nextLong();
+
+
 if(startNum < 0){ // if - says an error message and breaks
     System.out.println("Invalid Number, Please Enter A Postive Integer");
 }
 
 // excution -> start
-long startTime, endTime, executionTime;
+
 startTime = System.currentTimeMillis();
+
+
 
 // Looping
 for (int i = 1; i <= n; i++){
     startNum = i;
     int count = 0;
+
     /* Part 1
     if (startNum == 1){
         System.out.println("The Collatz sequence for n = " + i);
@@ -64,16 +76,21 @@ for (int i = 1; i <= n; i++){
         System.out.println(biggest);
         System.out.println(biggestN);
     */
+    // print out
+System.out.print(n + " " + biggestN + " " + (biggest + 1) + " " + executionTime);
     }
-
+}
        // excution  -> end
        endTime = System.currentTimeMillis();
        executionTime = endTime - startTime;
     
-    // print out
-    System.out.print(n + " " + biggestN + " " + (biggest + 1) + " " + executionTime);
+    
 }
+
+
 }
+
+
     /*
      *  TO DO
      *  - P1 Done

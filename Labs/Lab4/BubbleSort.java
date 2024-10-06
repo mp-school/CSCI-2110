@@ -1,4 +1,4 @@
-//package Labs.Lab4; // comment out when handing in
+package Labs.Lab4; // comment out when handing in
 
 // Full Name: [Megan Picard]
 // ID Number: [B00939548]

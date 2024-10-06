@@ -21,6 +21,11 @@ int biggestN = 0;
 if(startNum < 0){ // if - says an error message and breaks
     System.out.println("Invalid Number, Please Enter A Postive Integer");
 }
+
+// excution -> start
+long startTime, endTime, executionTime;
+startTime = System.currentTimeMillis();
+
 // Looping
 for (int i = 1; i <= n; i++){
     startNum = i;
@@ -60,9 +65,13 @@ for (int i = 1; i <= n; i++){
         System.out.println(biggestN);
     */
     }
+
+       // excution  -> end
+       endTime = System.currentTimeMillis();
+       executionTime = endTime - startTime;
     
-    System.out.print("For n= " + n + ", the starting number of the longest Collatz sequence is " + biggestN);
-    System.out.println(" and the length of the longest sequence is " + (biggest + 1)  + ". ");
+    // print out
+    System.out.print(n + " " + biggestN + " " + (biggest + 1) + " " + executionTime);
 }
 }
     /*
@@ -72,6 +81,19 @@ for (int i = 1; i <= n; i++){
      * 
      * 
      * 
+     * 
+     */
+
+      /*
+     *  TEST CASES
+     *  
+     * 5: 5 3 8 0 ✓
+     * 100: 100 97 119 1 ✓
+     * 1000: 1000 871 179 2 ✓
+     * 10000: 10000 6171 262 11 ✓
+     * 100000: 100000 77031 351 22 ✓
+     * 1000000: 1000000 837799 525 243 ✓
+     * 10000000: 10000000 8400511 686 2437 ✓
      * 
      */
 

@@ -42,13 +42,13 @@ for (int i = 1; i <= n; i++){
     startNum = i;
     int count = 0;
 
-    /* Part 1
+  
     if (startNum == 1){
         System.out.println("The Collatz sequence for n = " + i);
     } else{
         System.out.print("The Collatz sequence for n = " + i + " -> ");
     }
-    */
+    
     while (startNum != 1){
         if (startNum %2 == 0){
             // System.out.println("Even"); //TEST

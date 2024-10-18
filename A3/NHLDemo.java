@@ -11,42 +11,45 @@ public class NHLDemo {
     
 public static void main(String[] args){
 
-System.out.print("Input the file path name yoou wish to read in': ");
+System.out.print("Input the file path name yoou wish to read in: ");
 // use /Users/meganpicard/Documents/CSCI-2110/A3/nhlstats.txt
 
 
 Scanner in = new Scanner(System.in);
 
+
+   
 String filein = in.nextLine();
 
-    
-     File reader = new File(filein);
-     Scanner n = new Scanner(reader);
+try{
+    File reader = new File(filein);
+    Scanner n = new Scanner(reader);
 
-
-    
-
-    
-    try {
-        while (n.hasNextLine()) {
-  
-            // writes to ouput file
-            FileWriter myWriter = new FileWriter("filename.txt");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!");
-            myWriter.close();
-        }
-    } catch (IOException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
+    while (n.hasNextLine()) {
+      String data = n.nextLine();
+      System.out.println(data);
     }
 
-     }
-    NHLStats obj = new NHLStats();
+    }catch (FileNotFoundException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+
+    
+    }
+}
+
+     
+
+
+
+
+
+
         
     
 
 
-    }
+}
 
 
 

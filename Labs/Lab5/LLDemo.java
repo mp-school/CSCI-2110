@@ -24,15 +24,21 @@ LinkedList<String> pokemon = new LinkedList<String>();
     }
     } while (!n.equals("quit"));
 
+        System.out.println(" ");
         System.out.println("\nPokemon in the list:");
         pokemon.enumerate();
 
+        System.out.println(" ");
         System.out.println("\n Even Pokemon in the list:");
         displayEven(pokemon);
 
+        System.out.println(" ");
         System.out.println("\n Odd Pokemon in the list:");
         displayOdd(pokemon);
 
+        System.out.println(" ");
+        System.out.println("\nReveresed List:");
+        reverse(pokemon);
     }
 
     
@@ -56,7 +62,25 @@ public static void displayOdd(LinkedList<String> list){
     }
 }
 
+//method to create a reversed linked list
+public static LinkedList<String> reverse(LinkedList<String> list){
+    
+    LinkedList<String> reversed = new LinkedList<String>();
 
+    for (int i = list.size() - 1; i >= 0; i--) {
+        reversed.add(list.getAt(i));
+        System.out.print(list.getAt(i) + " ");
+    }
+    
+    return reversed;
+    
+    }
+
+
+    //method to remove the middle node in the linked list
+    public static void removeMiddle(LinkedList<String> list){
+    //continue
+    }
 
 }
 

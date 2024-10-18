@@ -3,7 +3,7 @@
  * B00939548
  * Collatz
  */
-//package Assignments.A2; // comment out when handing in
+package Assignments.A2; // comment out when handing in
 import java.util.*;
 public class Collatz{
     

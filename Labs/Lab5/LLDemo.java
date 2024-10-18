@@ -4,8 +4,6 @@ import java.util.*;
 public class LLDemo {
     
 
-
-
 public static void main(String[] args){
     
 Scanner in = new Scanner(System.in);
@@ -16,20 +14,20 @@ String n = " ";
 System.out.println("Enter Pokemon names, one on each line");
 System.out.println("Enter quit to end");
 
-
-while (!n.equals("quit")){
-
-   n = in.nextLine();
-
-    System.out.println(" ");
-    System.out.println(n);
+LinkedList<String> pokemon = new LinkedList<String>();
 
 
+    do {
+        n = in.nextLine();
+        if (!n.equals("quit")) {
+            pokemon.add(n);
+    }
+    } while (!n.equals("quit"));
 
-
-}
-
+        System.out.println("\nPokemon in the list:");
+        pokemon.enumerate();
 
 
     }
+
 }

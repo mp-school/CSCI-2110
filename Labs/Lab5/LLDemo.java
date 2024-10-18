@@ -29,16 +29,20 @@ LinkedList<String> pokemon = new LinkedList<String>();
         pokemon.enumerate();
 
         System.out.println(" ");
-        System.out.println("\n Even Pokemon in the list:");
+        System.out.println("\nEven Pokemon in the list:");
         displayEven(pokemon);
 
         System.out.println(" ");
-        System.out.println("\n Odd Pokemon in the list:");
+        System.out.println("\nOdd Pokemon in the list:");
         displayOdd(pokemon);
 
         System.out.println(" ");
         System.out.println("\nReveresed List:");
         reverse(pokemon);
+
+        System.out.println(" ");
+        System.out.println("\nRemoved Middle Index:");
+        removeMiddle(pokemon);
     }
 
     
@@ -69,7 +73,7 @@ public static LinkedList<String> reverse(LinkedList<String> list){
 
     for (int i = list.size() - 1; i >= 0; i--) {
         reversed.add(list.getAt(i));
-        System.out.print(list.getAt(i) + " ");
+        System.out.print(list.getAt(i) + " "); // I added this because if i call enumerate its prints it backwards
     }
     
     return reversed;
@@ -79,7 +83,13 @@ public static LinkedList<String> reverse(LinkedList<String> list){
 
     //method to remove the middle node in the linked list
     public static void removeMiddle(LinkedList<String> list){
-    //continue
+        
+        int middle = list.size() / 2;
+        list.removeAt(middle);
+        
+       
+            list.enumerate();
+        
     }
 
 }
@@ -99,6 +109,16 @@ Ditto
 Charmander
 quit
 
+
+Pikachu
+Charizard
+Mewtwo
+Emboar
+Eevee
+Gengar
+Ditto
+Charmander
+quit
 
 
 Keko
@@ -130,3 +150,5 @@ quit
  * 
  * 
  */
+
+ 

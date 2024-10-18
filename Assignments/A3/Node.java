@@ -1,4 +1,4 @@
-package A3;
+package Assignments.A3;
 
 public class Node<T>
 {

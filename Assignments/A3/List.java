@@ -1,5 +1,5 @@
 
-package A3;
+package Assignments.A3;
 
 //Unordered list class
 public class List<T>

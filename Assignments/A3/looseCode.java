@@ -1,4 +1,4 @@
-package A3;
+package Assignments.A3;
 import java.util.*;
 import java.io.File;
 import java.util.Scanner; 

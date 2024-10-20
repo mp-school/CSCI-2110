@@ -73,8 +73,10 @@ public static LinkedList<String> reverse(LinkedList<String> list){
 
     for (int i = list.size() - 1; i >= 0; i--) {
         reversed.add(list.getAt(i));
-        System.out.print(list.getAt(i) + " "); // I added this because if i call enumerate its prints it backwards
+        System.out.print(list.getAt(i) + "--> "); // I added this because if i call enumerate its prints it backwards
+    
     }
+    
     
     return reversed;
     

@@ -1,0 +1,40 @@
+package Assignments.A3;
+import java.util.*;
+import java.io.File;
+import java.util.Scanner; 
+import java.io.FileNotFoundException;
+public class looseCode {
+    
+
+    // prints file
+    public static void main(String[] args){
+        
+       
+
+
+
+
+
+
+
+        writer.println("Players with highest points and their teams:");
+        List<PlayerRecord> topScorers = stats.mostPoints();
+        for (PlayerRecord player : topScorers) {
+            writer.println(player.getPlayerName() + " - " + player.getteamName());
+        }
+        
+        writer.println("\nMost aggressive players:");
+        List<PlayerRecord> aggressivePlayers = stats.mostAggressive();
+        for (PlayerRecord player : aggressivePlayers) {
+            writer.println(player.getPlayerName() + " - " + player.getpenaltyMinutes() + " penalty minutes");
+        }
+
+
+
+
+
+
+
+
+}
+}

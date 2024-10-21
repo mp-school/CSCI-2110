@@ -1,59 +1,41 @@
 package Assignments.A3;
-import java.util.*;
-import java.io.File;
-import java.util.Scanner; 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;   
-import java.io.IOException;
 
+import java.util.*;
+import java.io.*;
 
 public class NHLDemo {
-    
-public static void main(String[] args){
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the filename to read from: ");
+        String filename = scanner.nextLine();
 
-System.out.print("Input the file path name yoou wish to read in: ");
-// use /Users/meganpicard/Documents/CSCI-2110/A3/nhlstats.txt
+        NHLStats stats = new NHLStats();
 
+        // use /Users/meganpicard/Documents/CSCI-2110/Assignments/A3/nhlstats.txt
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(filename));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                StringTokenizer token = new StringTokenizer(line, "\t");
+                // Parse the line and create PlayerRecord objects
+                // Add PlayerRecord objects to stats
+            }
+            reader.close();
 
-Scanner in = new Scanner(System.in);
+            // Write results to nhlstatsoutput.txt
+            PrintWriter writer = new PrintWriter("Assignments/A3/nhlstatsoutput.txt");
+            writer.println("NHL Results Summary");
+            
+            writer.println("Players with highest points and their teams:");
+            writer.flush();
+            // Call appropriate method and write results
+            
+            // Repeat for other statistics...
 
+            writer.close();
 
-   
-String filein = in.nextLine();
-
-try{
-    File reader = new File(filein);
-    Scanner n = new Scanner(reader);
-
-    while (n.hasNextLine()) {
-      String data = n.nextLine();
-      System.out.println(data);
-    }
-
-    }catch (FileNotFoundException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
-
-    
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }
 }
-
-     
-
-
-
-
-
-
-        
-    
-
-
-}
-
-
-
-
-    
-
-

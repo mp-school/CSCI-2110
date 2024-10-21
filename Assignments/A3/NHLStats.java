@@ -6,15 +6,14 @@ import java.io.FileNotFoundException;
 
 
 public class NHLStats {
+    private List<PlayerRecord> players;
 
+    public NHLStats() {
+        players = new List<>(); // Use the provided List class
+    }
 
-    // create list
-    private LinkedList<PlayerRecord> playerStats; 
-
-    public NHLStats(){
-
-    LinkedList<PlayerRecord> playerStats = new LinkedList<>(); //consturctor
-
+    public void addPlayer(PlayerRecord player) {
+        players.add(player);
     }
 
     public void mostPoints(PlayerRecord item){ // goals + assits

@@ -1,13 +1,13 @@
-package Assignments.A3;
+// Full Name: [Megan Picard]
+// ID Number: [B00939548]
+//package Assignments.A3; // comment out handing in
 import java.util.*;
 import java.io.File;
-import java.util.Scanner; 
 import java.io.FileNotFoundException;
 
 
 public class NHLStats {
     private List<PlayerRecord> players;
-
     public NHLStats() {
         players = new List<>(); // Use the provided List class
     }
@@ -16,32 +16,31 @@ public class NHLStats {
         players.add(player);
     }
 
-    public void mostPoints(PlayerRecord item){ // goals + assits
-        
+    public PlayerRecord mostPoints(PlayerRecord item){ // goals + assits
+       return item;
     }
 
 
-    public void mostAgressive(PlayerRecord item){ // most penalty minutes
-
+    public PlayerRecord mostAgressive(PlayerRecord item){ // most penalty minutes
         
+        return item;
     }
 
-    public void MVP(PlayerRecord item){ // most game winning goals
-
-        
+    public PlayerRecord MVP(PlayerRecord item){ // most game winning goals
+        return item;
     }
 
 
-    public void mostPromising(PlayerRecord item){ // most shots on net
-        
+    public PlayerRecord mostPromising(PlayerRecord item){ // most shots on net
+        return item;
     }
 
-    public void teamMostAggressive(PlayerRecord item){ // most penatly minutes as a TEAM
-        
+    public PlayerRecord teamMostAggressive(PlayerRecord item){ // most penatly minutes as a TEAM
+        return item;
     }
 
-   public void teamMVP(PlayerRecord item){ // most game winning goals as a TEAM
-        
+   public PlayerRecord teamMVP(PlayerRecord item){ // most game winning goals as a TEAM
+        return item;
     }
 
 

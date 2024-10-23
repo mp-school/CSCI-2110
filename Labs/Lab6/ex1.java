@@ -10,39 +10,67 @@ public class ex1{
 
     Scanner in = new Scanner(System.in);
 
+    // Ui
+    System.out.println("Excerise 1 : 2110");
 
     // fact
-    System.out.println(" ");
-    System.out.println(" - - - - - - - - - - - - - - - - - - - ");
+    System.out.println("- - - - - - - - - - - - - - - - - - - ");
     System.out.println("Factorial of a number");
     System.out.print( "Enter a positive integer: ");
-    double input = in.nextDouble();
+    int fact = in.nextInt();
    
 
-    System.out.println(" The factorial of " +  input +  " is "  + fact(input));
+    System.out.println("The factorial of " +  fact +  " is "  + fact(fact));
 
-    System.out.println(" - - - - - - - - - - - - - - - - - - - ");
+    System.out.println("- - - - - - - - - - - - - - - - - - - ");
+    
+
+
+    // fib
+    System.out.println(" ");
+    System.out.println("- - - - - - - - - - - - - - - - - - - ");
+    System.out.println("Fibonacci numbers");
+    System.out.print( "The first 20 numbers in the Fibonacci series are ");
+    
+    
+
+    int i = 0;
+    while (i < 20){
+        System.out.print(fib(i) + ", ");
+        i++;
+       }
+
+
+   
+
+    System.out.println(" ");
+    System.out.println( "- - - - - - - - - - - - - - - - - - - ");
+  
+
+
+
     // expo
 
     System.out.println(" ");
+    System.out.println("- - - - - - - - - - - - - - - - - - - ");
     System.out.println("Power of a number");
     System.out.print( "Enter a positive integer x: ");
 
-    double x = in.nextDouble();
+    int x = in.nextInt();
 
     System.out.print( "Enter another positive integer: ");
-    double n = in.nextDouble();
+    int n = in.nextInt();
 
     
 
-    System.out.println(x + " to the power of  " + n + " is " + Math.pow(x, n));
+    System.out.println(x + " to the power of " + n + " is " + power(x, n));
 
-    System.out.println(" - - - - - - - - - - - - - - - - - - - ");
+    System.out.println("- - - - - - - - - - - - - - - - - - - ");
 
     }
     //Factorial
 
-        public static double fact(double input){
+        public static int fact(int input){
 
             if (input == 0){
 
@@ -58,12 +86,17 @@ public class ex1{
 
     //Fib nums
 
-    public double[] fib(double input){
+    public static int fib(int input){
 
-        double fibNumbers[] = {5};
+        if (input ==0){
+           return 0;
 
-        return fibNumbers;
-
+        } else if (input == 1){
+            return 1; 
+        } else {
+            return fib(input-1) + fib(input-2); //glue case
+        }
+         
 
 
     }
@@ -71,13 +104,13 @@ public class ex1{
 
     //Exponents
 
-    public static double expo(double x, double n){
+    public static int power(int x, int n){
         
        if (n == 0){
         return 1; // base case
 
        } else {
-        return Math.pow(x, n); // glue case
+        return power(x, n-1)*x; // glue case
        }
         
 

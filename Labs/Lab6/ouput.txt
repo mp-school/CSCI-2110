@@ -1,0 +1,20 @@
+Ex 1
+
+Ouput
+Excerise 1 : 2110
+- - - - - - - - - - - - - - - - - - - 
+Factorial of a number
+Enter a positive integer: 6
+The factorial of 6 is 720
+- - - - - - - - - - - - - - - - - - - 
+ 
+- - - - - - - - - - - - - - - - - - - 
+Fibonacci numbers
+The first 20 numbers in the Fibonacci series are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,  
+- - - - - - - - - - - - - - - - - - - 
+ 
+- - - - - - - - - - - - - - - - - - - 
+Power of a number
+Enter a positive integer x: 9
+Enter another positive integer: 8
+9 to the power of 8 is 43046721

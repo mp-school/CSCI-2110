@@ -17,12 +17,13 @@ public class ex3 {
     }
 
     public static void countDown(int n){
-        if (n <= 0) {
+        
+        if (n <= 0) { // base case
             System.out.println("BlastOff!");
-        } else if (n%2 == 0){
+        } else if (n%2 == 0){ //glue case
             System.out.print(n +  "    ");
             countDown(n - 2);
-        } else{
+        } else{ // glue case
             System.out.print(n +  "    ");
             countDown(n - 2);
         }

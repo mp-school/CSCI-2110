@@ -2,7 +2,6 @@ package Labs.Lab6;
 // Megan Picard
 // B009393548
 
-
 import java.util.*;
 
 public class ex1{
@@ -73,8 +72,8 @@ public class ex1{
         public static int fact(int input){
 
             if (input == 0){
-
                 return 1;
+            
             } else {
                 return input * fact(input - 1);
             }
@@ -93,6 +92,7 @@ public class ex1{
 
         } else if (input == 1){
             return 1; 
+
         } else {
             return fib(input-1) + fib(input-2); //glue case
         }

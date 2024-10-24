@@ -2,36 +2,29 @@ package Labs.Lab6;
 // Megan Picard
 // B009393548
 
-
 import java.util.*;
 
-
-
-public class ex2 {
+public class ex6 {
+ 
     public static void main(String[] args) {
-       
-     Scanner in = new Scanner(System.in);
+        
+    Scanner in = new Scanner(System.in);
 
         System.out.print( "Enter a positive integer: ");
         int n = in.nextInt();
-        countDown(n);
+        System.out.println(squares(n)); 
 
     }
 
-    public static void countDown(int n){
+    public static int squares(int n) {
        
         if (n == 0) { // base case
-            System.out.println("BlastOff!");
-        
+            return 0;
+            
         } else { // glue case
-            System.out.print(n + "   ");
-            countDown(n - 1);
+            return squares(n - 1) + n * n; 
         }
     }
-
-
-
-
 
 
 }

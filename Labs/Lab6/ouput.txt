@@ -59,3 +59,33 @@ Output 3
 Enter a positive integer: 101
 101    99    97    95    93    91    89    87    85    83    81    79    77    75    73    71    69    67    65    63    61    59    57    55    53    51    49    
 47    45    43    41    39    37    35    33    31    29    27    25    23    21    19    17    15    13    11    9    7    5    3    1    BlastOff!
+
+
+
+Ex4
+
+Output 1
+
+Enter a positive integer: 2
+Enter another positive integer: 5
+10, 8, 6, 4, 2
+
+Output 2
+Enter a positive integer: 62
+Enter another positive integer: 4
+248, 186, 124, 62
+
+Output 3
+Enter a positive integer: 17
+Enter another positive integer: 9
+153, 136, 119, 102, 85, 68, 51, 34, 17
+
+
+
+
+
+
+
+
+
+

@@ -19,7 +19,11 @@ Enter a positive integer x: 9
 Enter another positive integer: 8
 9 to the power of 8 is 43046721
 
+
+
+
 Ex 2
+
 Output 1
 Enter a positive integer: 100
 100   99   98   97   96   95   94   93   92   91   90   89   88   87   86   85   84   83   82   
@@ -35,3 +39,23 @@ Enter a positive integer: 27
 Output 3
 Enter a positive integer: 12
 12   11   10   9   8   7   6   5   4   3   2   1   BlastOff!
+
+
+
+
+
+Ex3
+
+Output 1
+Enter a positive integer: 27
+27    25    23    21    19    17    15    13    11    9    7    5    3    1    BlastOff!
+
+
+Output 2 
+Enter a positive integer: 50
+50    48    46    44    42    40    38    36    34    32    30    28    26    24    22    20    18    16    14    12    10    8    6    4    2    BlastOff!
+
+Output 3
+Enter a positive integer: 101
+101    99    97    95    93    91    89    87    85    83    81    79    77    75    73    71    69    67    65    63    61    59    57    55    53    51    49    
+47    45    43    41    39    37    35    33    31    29    27    25    23    21    19    17    15    13    11    9    7    5    3    1    BlastOff!

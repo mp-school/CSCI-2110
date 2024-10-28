@@ -1,4 +1,4 @@
-package Labs.Lab6;
+//package Labs.Lab6; // comment out when handing in
 // Megan Picard
 // B009393548
 
@@ -7,16 +7,15 @@ import java.util.*;
 public class ex1{
     public static void main(String[] args){
 
-    Scanner in = new Scanner(System.in);
+Scanner in = new Scanner(System.in);
 
-    // Ui
-    System.out.println("Excerise 1 : 2110");
-
-    // fact
+// Ui
+    
+// fact
     System.out.println("- - - - - - - - - - - - - - - - - - - ");
     System.out.println("Factorial of a number");
     System.out.print( "Enter a positive integer: ");
-    int fact = in.nextInt();
+        int fact = in.nextInt();
    
 
     System.out.println("The factorial of " +  fact +  " is "  + fact(fact));
@@ -25,7 +24,7 @@ public class ex1{
     
 
 
-    // fib
+// fib
     System.out.println(" ");
     System.out.println("- - - - - - - - - - - - - - - - - - - ");
     System.out.println("Fibonacci numbers");
@@ -33,49 +32,44 @@ public class ex1{
     
     
 
-    int i = 0;
-    while (i < 20){
-        System.out.print(fib(i) + ", ");
-        i++;
-       }
+        int i = 0;
+        while (i < 20){
+            System.out.print(fib(i) + ", ");
+            i++;
+           }
 
-
-   
 
     System.out.println(" ");
     System.out.println( "- - - - - - - - - - - - - - - - - - - ");
   
 
-
-
-    // expo
+// expo
 
     System.out.println(" ");
     System.out.println("- - - - - - - - - - - - - - - - - - - ");
     System.out.println("Power of a number");
     System.out.print( "Enter a positive integer x: ");
 
-    int x = in.nextInt();
+        int x = in.nextInt();
 
     System.out.print( "Enter another positive integer: ");
-    int n = in.nextInt();
-
-    
+        
+        int n = in.nextInt();
 
     System.out.println(x + " to the power of " + n + " is " + power(x, n));
 
     System.out.println("- - - - - - - - - - - - - - - - - - - ");
 
-    }
+}
     //Factorial
 
-        public static int fact(int input){
+    public static int fact(int input){
 
-            if (input == 0){
+        if (input == 0){ // base case
                 return 1;
             
-            } else {
-                return input * fact(input - 1);
+            } else { // glue case
+                return (input * fact(input - 1));
             }
 
 
@@ -87,14 +81,14 @@ public class ex1{
 
     public static int fib(int input){
 
-        if (input ==0){
+        if (input ==0){ // base case
            return 0;
 
-        } else if (input == 1){
+        } else if (input == 1){ // base case
             return 1; 
 
-        } else {
-            return fib(input-1) + fib(input-2); //glue case
+        } else { // glue case
+            return (fib(input-1) + fib(input-2)); 
         }
          
 
@@ -110,7 +104,7 @@ public class ex1{
         return 1; // base case
 
        } else {
-        return power(x, n-1)*x; // glue case
+        return (power(x, n-1) * x); // glue case
        }
         
 

@@ -7,29 +7,28 @@ import java.util.Scanner;
 public class ex5 {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        
+    Scanner in = new Scanner(System.in);
         
         
-        for (int i = 0; i < 3; i++) {
-            System.out.print("Enter a positive integer: ");
-            
-            while (in.hasNextInt()){
+    System.out.print("Enter a positive integer: ");
+        
+       
+            while (true){ // loop to get n values
                 int n = in.nextInt();
                 writeVertical(n);
                 System.out.println(); 
             }
-        }
         
-         in.close();
     }
 
     public static void writeVertical(int n) {
         
-        if (n < 10) { // base
+        if (n < 10) { // base  case
             System.out.println(n);
             return;
 
-        } else{ // glue
+        } else{ // glue case
             writeVertical(n / 10);
             System.out.println(n % 10);
         }

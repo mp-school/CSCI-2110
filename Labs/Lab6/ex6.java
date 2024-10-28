@@ -10,9 +10,11 @@ public class ex6 {
         
     Scanner in = new Scanner(System.in);
 
-        System.out.print( "Enter a positive integer: ");
+    System.out.print( "Enter a positive integer: ");
+        
         int n = in.nextInt();
-        System.out.println(squares(n)); 
+    
+    System.out.println(squares(n)); 
 
     }
 
@@ -22,7 +24,7 @@ public class ex6 {
             return 0;
             
         } else { // glue case
-            return squares(n - 1) + n * n; 
+            return (squares(n - 1) + n * n); 
         }
     }
 

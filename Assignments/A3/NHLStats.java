@@ -1,6 +1,6 @@
 // Full Name: [Megan Picard]
 // ID Number: [B00939548]
-//package Assignments.A3; // comment out handing in
+package Assignments.A3; // comment out handing in
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-//package Labs.Lab6; // comment out when handing in
+package Labs.Lab6; // comment out when handing in
 // Megan Picard
 // B009393548
 

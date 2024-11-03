@@ -1,7 +1,7 @@
 // Full Name: [Megan Picard]
 // ID Number: [B00939548]
 
-//package Labs.Lab5; // comment out whe handing in
+package Labs.Lab5; // comment out whe handing in
 import java.util.*;
 
 public class LLDemo {

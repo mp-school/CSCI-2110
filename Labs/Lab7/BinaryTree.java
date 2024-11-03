@@ -144,9 +144,10 @@ public class BinaryTree<T> {
 	// this method tests whether a tree is height balanced
 	public static <T> boolean heightBalanced(BinaryTree<T> t) {
 	
-        if (t == null){
+        if ((findHeight(t.getLeft()) > findHeight(t.getRight()) + 1 || findHeight(t.getLeft()) < findHeight(t.getRight()) + 1 )){
             return false;
-        } else {
+        } 
+         else{
             return true;
         }
 	}
@@ -179,6 +180,27 @@ public class BinaryTree<T> {
 	// nodes/trees in level order
 	public static <T> void levelOrder(BinaryTree<T> t) {
 	
-	
+		if (t == null) { // base case
+		return;
+		} 
+
+		ArrayList <BinaryTree<T>> level = new ArrayList<>();
+		level.add(t); // add root node
+
+		while (!level.isEmpty()){
+			BinaryTree<T> current = level.remove(0);
+			System.out.print(current.getData() + "\t");
+
+			// add left first
+			if(current.getLeft() != null){ // glue 
+				level.add(current.getLeft());
+			}
+			
+			if(current.getRight() != null){ // glue
+				level.add(current.getRight());
+			}
+			
+
+		}
 	}
 }

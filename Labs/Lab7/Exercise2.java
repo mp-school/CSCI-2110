@@ -1,58 +1,60 @@
-package Labs.Lab7; // get rid of when handing in
+
 import java.util.*;
 
 public class Exercise2 {
     public static void main(String[] args) {
         
 // use array list 
-    ArrayList<BinaryTree<String>> testTree = new ArrayList<>(); 
+    ArrayList<BinaryTree<String>> q = new ArrayList<>(); 
     
     Scanner in = new Scanner(System.in);
 
-// ui loop
+// ui loop - arbitrary number of Strings
     while (true) {
 
-            System.out.print("Enter name or done: ");
+        System.out.print("Enter name or done: ");
 
-            String ui = in.nextLine(); // user input
+        String ui = in.nextLine(); // user input
 
-            if (ui.equalsIgnoreCase("done")) { // exit case is done and ignore caps
-                break; 
-            }
+        // exit case is done and ignore caps
+        if (ui.equalsIgnoreCase("done")) { 
+            break; 
+        } 
 
-            // make binary tree
-            BinaryTree<String> node = new BinaryTree<>();
-            node.makeRoot(ui); 
-            testTree.add(node);
+        // make binary tree
+        BinaryTree<String> node = new BinaryTree<>();
+        node.makeRoot(ui); 
+        q.add(node);
             
         }
 
        
     BinaryTree<String> root = null; // set root to null
 
-    for (int i = 0; i < testTree.size(); i++) {
+    for (int i = 0; i < q.size(); i++) {
 
         if (root == null) { // base case
-                root = testTree.get(i); 
+                root = q.get(i); 
             
         } else { // glue case
                
-            BinaryTree<String> current = root;
+        BinaryTree<String> current = root; // use to go through tree
 
-    while (true) {
-
-         if (current.getLeft() == null) { // base case
-                current.attachLeft(testTree.get(i));
+            // adds to the left first
+            while (true) { // while loop to add to left/right branch
+            
+            if (current.getLeft() == null) { // base case 
+                current.attachLeft(q.get(i));
                 break;
 
-        } else if (current.getRight() == null) { // base case
-                current.attachRight(testTree.get(i));
+            } else if (current.getRight() == null) { // base case
+                current.attachRight(q.get(i));
                 break;
 
-        } else { // glue case         
+            } else { // glue case - add left        
                 current = current.getLeft();
-                    
-        }
+            }
+
 
             }
         }
@@ -82,42 +84,4 @@ public class Exercise2 {
         System.out.println();
     }
 
-    	/*        
-		      emboar
-              /   \
-        unfezant   palkia
-            / \   
-    seperior   samurott
-          
-    */
-
-
-    /*        
-		        1
-              /   \
-             2     3
-            / \   
-            4  5
-           / \
-          6   7
-         / \
-        8  9
-    */
-
-
-     /*        
-		        A
-              /   \
-             B     C
-            / \
-           D   E
-          / \
-         F   G
-        / \
-       H   I
-      / \
-     J   K
-    / \
-   L   M
-    */
 }

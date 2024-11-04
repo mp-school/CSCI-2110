@@ -186,20 +186,21 @@ public class BinaryTree<T> {
 		return;
 		} 
 
-		ArrayList <BinaryTree<T>> level = new ArrayList<>();
-		level.add(t); // add root node
+		ArrayList<BinaryTree<T>> q = new ArrayList<BinaryTree<T>>(); 
+		q.add(t); // add root node
 
-		while (!level.isEmpty()){
-			BinaryTree<T> current = level.remove(0);
+		// repeat until q is empty
+		while (!q.isEmpty()){
+			BinaryTree<T> current = q.remove(0);
 			System.out.print(current.getData() + "\t");
 
 			// add left first
 			if(current.getLeft() != null){ // glue case
-				level.add(current.getLeft());
+				q.add(current.getLeft());
 			}
 			
 			if(current.getRight() != null){ // glue case
-				level.add(current.getRight());
+				q.add(current.getRight());
 			}
 			
 

@@ -1,0 +1,112 @@
+BinaryTreeDemo Output
+
+Input 1
+BinaryTree<String> A = new BinaryTree<String>();
+		BinaryTree<String> B = new BinaryTree<String>();
+		BinaryTree<String> C = new BinaryTree<String>();
+		BinaryTree<String> D = new BinaryTree<String>();
+		BinaryTree<String> E = new BinaryTree<String>();
+		BinaryTree<String> F = new BinaryTree<String>();
+
+	
+		A.makeRoot("A");
+		B.makeRoot("B");
+		C.makeRoot("C");
+		D.makeRoot("D");
+		E.makeRoot("E");
+		F.makeRoot("F");
+
+
+		A.attachLeft(B);
+		A.attachRight(C);
+		B.attachLeft(D);
+		B.attachRight(E);
+		D.attachLeft(F);
+
+Output 1 
+Height of the tree is: 3
+Number of nodes in the tree is: 6
+
+Inorder:        F       D       B       E       A       C
+Preorder:       A       B       D       F       E       C
+Postorder:      F       D       E       B       C       A
+Levelorder:     A       B       C       D       E       F
+
+And is it height balanced... No.
+
+
+Input 2
+BinaryTree<String> A = new BinaryTree<String>();
+		BinaryTree<String> B = new BinaryTree<String>();
+		BinaryTree<String> C = new BinaryTree<String>();
+		BinaryTree<String> D = new BinaryTree<String>();
+		BinaryTree<String> E = new BinaryTree<String>();
+		BinaryTree<String> F = new BinaryTree<String>();
+		BinaryTree<String> G = new BinaryTree<String>();
+	
+		A.makeRoot("A");
+		B.makeRoot("B");
+		C.makeRoot("C");
+		D.makeRoot("D");
+		E.makeRoot("E");
+		F.makeRoot("F");
+		G.makeRoot("G");
+
+		A.attachLeft(B);
+		A.attachRight(C);
+		B.attachLeft(D);
+		B.attachRight(E);
+		D.attachLeft(F);
+		C.attachLeft(G);
+
+
+
+Output 2
+Height of the tree is: 3
+Number of nodes in the tree is: 7
+
+Inorder:        F       D       B       E       A       G       C
+Preorder:       A       B       D       F       E       C       G
+Postorder:      F       D       E       B       G       C       A
+Levelorder:     A       B       C       D       E       G       F
+
+And is it height balanced... Yes!
+
+Input 3 
+
+	BinaryTree<String> A = new BinaryTree<String>();
+		BinaryTree<String> B = new BinaryTree<String>();
+		BinaryTree<String> C = new BinaryTree<String>();
+		BinaryTree<String> D = new BinaryTree<String>();
+		BinaryTree<String> E = new BinaryTree<String>();
+		BinaryTree<String> F = new BinaryTree<String>();
+		BinaryTree<String> G = new BinaryTree<String>();
+		BinaryTree<String> H = new BinaryTree<String>();
+	
+		A.makeRoot("A");
+		B.makeRoot("B");
+		C.makeRoot("C");
+		D.makeRoot("D");
+		E.makeRoot("E");
+		F.makeRoot("F");
+		G.makeRoot("G");
+		H.makeRoot("H");
+
+		A.attachLeft(B);
+		A.attachRight(C);
+		B.attachLeft(D);
+		B.attachRight(E);
+		D.attachLeft(F);
+		C.attachLeft(G);
+		F.attachLeft(H);
+
+Output 3
+Height of the tree is: 4
+Number of nodes in the tree is: 8
+
+Inorder:        H       F       D       B       E       A       G       C
+Preorder:       A       B       D       F       H       E       C       G
+Postorder:      H       F       D       E       B       G       C       A
+Levelorder:     A       B       C       D       E       G       F       H
+
+And is it height balanced... No.

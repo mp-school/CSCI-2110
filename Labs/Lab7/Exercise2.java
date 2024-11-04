@@ -1,15 +1,15 @@
-package Labs.Lab7;
+package Labs.Lab7; // get rid of when handing in
 import java.util.*;
 
 public class Exercise2 {
     public static void main(String[] args) {
         
-    // use array list 
+// use array list 
     ArrayList<BinaryTree<String>> testTree = new ArrayList<>(); 
     
     Scanner in = new Scanner(System.in);
 
-    // ui loop
+// ui loop
     while (true) {
 
             System.out.print("Enter name or done: ");
@@ -22,13 +22,13 @@ public class Exercise2 {
 
             // make binary tree
             BinaryTree<String> node = new BinaryTree<>();
-            node.makeRoot(ui);
+            node.makeRoot(ui); 
             testTree.add(node);
-
+            
         }
 
        
-    BinaryTree<String> root = null;
+    BinaryTree<String> root = null; // set root to null
 
     for (int i = 0; i < testTree.size(); i++) {
 
@@ -40,14 +40,16 @@ public class Exercise2 {
             BinaryTree<String> current = root;
 
     while (true) {
-         if (current.getLeft() == null) {
+
+         if (current.getLeft() == null) { // base case
                 current.attachLeft(testTree.get(i));
                 break;
-        } else if (current.getRight() == null) {
+
+        } else if (current.getRight() == null) { // base case
                 current.attachRight(testTree.get(i));
                 break;
-        } else {
-                        
+
+        } else { // glue case         
                 current = current.getLeft();
                     
         }
@@ -56,7 +58,8 @@ public class Exercise2 {
         }
     }
 
-        // Test statements -> from binary tree demo
+// Test statements -> from binary tree demo
+
         System.out.println();
         System.out.printf("Height of the tree is: %d\n", BinaryTree.findHeight(root));
         System.out.printf("Number of nodes in the tree is: %d\n", BinaryTree.countNodes(root));
@@ -78,4 +81,43 @@ public class Exercise2 {
         BinaryTree.levelOrder(root);
         System.out.println();
     }
+
+    	/*        
+		      emboar
+              /   \
+        unfezant   palkia
+            / \   
+    seperior   samurott
+          
+    */
+
+
+    /*        
+		        1
+              /   \
+             2     3
+            / \   
+            4  5
+           / \
+          6   7
+         / \
+        8  9
+    */
+
+
+     /*        
+		        A
+              /   \
+             B     C
+            / \
+           D   E
+          / \
+         F   G
+        / \
+       H   I
+      / \
+     J   K
+    / \
+   L   M
+    */
 }

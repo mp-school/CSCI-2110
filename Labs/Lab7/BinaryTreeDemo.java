@@ -1,4 +1,4 @@
-package Labs.Lab7;
+package Labs.Lab7; // get rid of when handing in
 public class BinaryTreeDemo {
 	public static void main(String[] args) {
 
@@ -8,6 +8,7 @@ public class BinaryTreeDemo {
 		BinaryTree<String> D = new BinaryTree<String>();
 		BinaryTree<String> E = new BinaryTree<String>();
 		BinaryTree<String> F = new BinaryTree<String>();
+
 	
 		A.makeRoot("A");
 		B.makeRoot("B");
@@ -15,13 +16,14 @@ public class BinaryTreeDemo {
 		D.makeRoot("D");
 		E.makeRoot("E");
 		F.makeRoot("F");
-		
+
 
 		A.attachLeft(B);
 		A.attachRight(C);
 		B.attachLeft(D);
 		B.attachRight(E);
 		D.attachLeft(F);
+
 		
 
 		// test statements
@@ -52,6 +54,16 @@ public class BinaryTreeDemo {
 		System.out.printf("And is it height balanced... %s\n", BinaryTree.heightBalanced(A) ? "Yes!" : "No.");
 
 		System.out.println();
+
+	/*        
+		        A
+              /   \
+             B     C
+            / \   
+           D   E 
+          /
+         F 
+    */
 	}
 
 }

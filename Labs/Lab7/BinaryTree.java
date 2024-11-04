@@ -1,4 +1,4 @@
-package Labs.Lab7;
+package Labs.Lab7; // get rid of when handing in
 
 //This class contains the methods for the BinaryTree class.
 //For the lab Exercise 1, you need to complete the TO-DO methods

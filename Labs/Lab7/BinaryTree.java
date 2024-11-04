@@ -125,6 +125,7 @@ public class BinaryTree<T> {
 	
         if (t == null){
             return 0;
+
         } else {
             return 1 + countNodes(t.getLeft()) + countNodes(t.getRight());
         }
@@ -135,7 +136,8 @@ public class BinaryTree<T> {
 	public static <T> int findHeight(BinaryTree<T> t) {
         if (t == null){
             return -1;
-        } else{
+
+        } else {
             return 1 + Math.max(findHeight(t.getLeft()), findHeight(t.getRight()));
         }
 	
@@ -147,7 +149,7 @@ public class BinaryTree<T> {
         if ((findHeight(t.getLeft()) > findHeight(t.getRight()) + 1 || findHeight(t.getLeft()) < findHeight(t.getRight()) + 1 )){
             return false;
         } 
-         else{
+         else {
             return true;
         }
 	}
@@ -192,11 +194,11 @@ public class BinaryTree<T> {
 			System.out.print(current.getData() + "\t");
 
 			// add left first
-			if(current.getLeft() != null){ // glue 
+			if(current.getLeft() != null){ // glue case
 				level.add(current.getLeft());
 			}
 			
-			if(current.getRight() != null){ // glue
+			if(current.getRight() != null){ // glue case
 				level.add(current.getRight());
 			}
 			

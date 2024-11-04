@@ -3,46 +3,60 @@ import java.util.*;
 
 public class Exercise2 {
     public static void main(String[] args) {
-        ArrayList<BinaryTree<String>> testTree = new ArrayList<>();
-        Scanner in = new Scanner(System.in);
+        
+    // use array list 
+    ArrayList<BinaryTree<String>> testTree = new ArrayList<>(); 
+    
+    Scanner in = new Scanner(System.in);
 
-        // user input loop
-        while (true) {
+    // ui loop
+    while (true) {
+
             System.out.print("Enter name or done: ");
-            String ui = in.nextLine();
-            if (ui.equalsIgnoreCase("done")) {
-                break;
+
+            String ui = in.nextLine(); // user input
+
+            if (ui.equalsIgnoreCase("done")) { // exit case is done and ignore caps
+                break; 
             }
+
+            // make binary tree
             BinaryTree<String> node = new BinaryTree<>();
             node.makeRoot(ui);
             testTree.add(node);
+
         }
 
        
-        BinaryTree<String> root = null;
-        for (int i = 0; i < testTree.size(); i++) {
-            if (root == null) { // base case
+    BinaryTree<String> root = null;
+
+    for (int i = 0; i < testTree.size(); i++) {
+
+        if (root == null) { // base case
                 root = testTree.get(i); 
             
-            } else { // glue case
+        } else { // glue case
                
-                BinaryTree<String> current = root;
-                while (true) {
-                    if (current.getLeft() == null) {
-                        current.attachLeft(testTree.get(i));
-                        break;
-                    } else if (current.getRight() == null) {
-                        current.attachRight(testTree.get(i));
-                        break;
-                    } else {
+            BinaryTree<String> current = root;
+
+    while (true) {
+         if (current.getLeft() == null) {
+                current.attachLeft(testTree.get(i));
+                break;
+        } else if (current.getRight() == null) {
+                current.attachRight(testTree.get(i));
+                break;
+        } else {
                         
-                        current = current.getLeft();
-                    }
-                }
-            }
+                current = current.getLeft();
+                    
         }
 
-        // Test statements
+            }
+        }
+    }
+
+        // Test statements -> from binary tree demo
         System.out.println();
         System.out.printf("Height of the tree is: %d\n", BinaryTree.findHeight(root));
         System.out.printf("Number of nodes in the tree is: %d\n", BinaryTree.countNodes(root));

@@ -98,7 +98,7 @@ public class Merged {
     public static void main(String[] args) throws IOException {
         // Read RandomNames.txt
         ArrayList<String> allNames = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("A4/RandomNames.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("RandomNames.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (!line.trim().isEmpty()) {

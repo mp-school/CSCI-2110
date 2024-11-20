@@ -1,6 +1,4 @@
 package Assignments.A4;
-
-
     /*
 OrderedList Data Structure
 */

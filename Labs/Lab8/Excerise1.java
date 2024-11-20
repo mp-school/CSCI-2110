@@ -22,13 +22,16 @@ public class Excerise1 {
 
             //make the binary search tree
             
+            if (ui != 0 ){ // make sure 0 isnt added
             testTree.insert(ui);
-           
-            
+           }
 
         }
 
         BinaryTree.inorder(testTree.getTree());
+
+        // find max not working -  just ouputs null
+        // System.out.println(testTree.findMax());
 
 
     }

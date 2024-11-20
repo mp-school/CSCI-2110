@@ -183,14 +183,14 @@ public class BinarySearchTree<T extends Comparable<T>>{
 		size--;
 	}
 
-    public T findMax(T item){
+    public T findMax(){
         //ToDo
-		if (item == null)
-        {
-            return item;
-        }
 
         BinaryTree<T> check = new BinaryTree<>();
+		if (check == null)
+        {
+            return check.getData();
+        }
 
         while (check.getRight() != null)
         {

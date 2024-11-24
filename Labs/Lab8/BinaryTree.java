@@ -104,7 +104,7 @@ package Labs.Lab8;
 	}
 
 	public void clear(){
-		left = right = parent =null;
+		left = right = parent = null;
 		data = null;
 	}
 

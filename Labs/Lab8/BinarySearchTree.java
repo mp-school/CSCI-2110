@@ -185,24 +185,30 @@ public class BinarySearchTree<T extends Comparable<T>>{
 
     public T findMax(){
         //ToDo
-
-        BinaryTree<T> check = new BinaryTree<>();
-		if (check == null)
-        {
-            return check.getData();
-        }
-
-        while (check.getRight() != null)
-        {
-            check = check.getRight();
-        }
-
-        return check.getData();
+		if (isEmpty() == true){
+			return null; // if empty return null
+		} else{
+			BinaryTree<T> curr = tree; // start at root
+			while (curr.getRight() != null){ // bigger -> right so go right until null
+				curr = curr.getRight();
+		}
+		return curr.getData(); // return curr
+	}
+		
     }
 
-    public T findMin(){
+    public T findMin(){ // same as max but go left
 		//ToDo
-		return null;
+		if (isEmpty() == true){
+			return null; // if empty return null
+		
+		} else{
+			BinaryTree<T> curr = tree; // start at root
+			while (curr.getLeft() != null){ // smaller -> left so go left until null
+				curr = curr.getLeft();
+		}
+		return curr.getData(); // return curr
+		}
 
     }
 

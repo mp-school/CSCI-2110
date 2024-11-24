@@ -14,7 +14,11 @@ public class Excerise1 {
 
         // takes in user input until 0 is inputed
         System.out.println("Enter int or '0': ");
+        
         double ui = in.nextDouble();
+        if (ui >= 1){
+            testTree.insert(ui);
+        }
 
         while (ui != 0){
             System.out.println("Enter int or '0': ");
@@ -23,15 +27,32 @@ public class Excerise1 {
             //make the binary search tree
             
             if (ui != 0 ){ // make sure 0 isnt added
-            testTree.insert(ui);
+                testTree.insert(ui); // the bst will sort it
+
+
            }
 
         }
 
+        // testing - -  - - - - - - -- - - - -  -
+
+        BinaryTree.preorder(testTree.getTree());
+        System.out.println(" ");
+
+        BinaryTree.postorder(testTree.getTree());
+
+        System.out.println(" ");
         BinaryTree.inorder(testTree.getTree());
 
-        // find max not working -  just ouputs null
-        // System.out.println(testTree.findMax());
+        System.out.println(" ");
+
+       // - - - - - - -  -- - - - - - -- - - -  -
+
+        // call find max 
+        System.out.println("The max data value in the BST is: " + testTree.findMax());
+
+        // call find min
+        System.out.println("The min data value in the BST is: " + testTree.findMin());
 
 
     }

@@ -3,9 +3,6 @@ import java.util.*;
 // [Megan Picard]
 // [B00939548]
 
-import javax.swing.tree.TreeNode;
-
-
 public class Excerise1 {
     public static void main(String[] args) {
         
@@ -57,11 +54,11 @@ public class Excerise1 {
        
         if (checkKey != null && checkKey.getData() == (key)){ // if checkkey isnt null and matches user input key
             System.out.println(" ");
-            System.out.println("Key Found!"); // found
+            System.out.println("Found!"); // found
             System.out.println(" - - - - -");
         } else{
             System.out.println(" ");
-            System.out.println("Key Not Found!"); // not found
+            System.out.println("Not Found!"); // not found
             System.out.println(" - - - - -");
         }
     }

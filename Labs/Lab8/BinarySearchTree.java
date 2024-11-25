@@ -190,7 +190,7 @@ public class BinarySearchTree<T extends Comparable<T>>{
 		} else{
 			BinaryTree<T> curr = tree; // start at root
 			while (curr.getRight() != null){ // bigger -> right so go right until null
-				curr = curr.getRight();
+			curr = curr.getRight();
 		}
 		return curr.getData(); // return curr
 	}
@@ -205,7 +205,7 @@ public class BinarySearchTree<T extends Comparable<T>>{
 		} else{
 			BinaryTree<T> curr = tree; // start at root
 			while (curr.getLeft() != null){ // smaller -> left so go left until null
-				curr = curr.getLeft();
+			curr = curr.getLeft();
 		}
 		return curr.getData(); // return curr
 		}

@@ -220,8 +220,37 @@ public class BinarySearchTree<T extends Comparable<T>>{
 
     public BinaryTree<T> recursiveSearch(BinaryTree<T> t, T key) {
     	//ToDo
-		return null;
+
+		// must be recursive 
+
+		if (t == null) {
+			return null; // base case 
+		} 
+		
+		// base
+		if (t.getData().equals(key)) {
+			return t; // Key found
+		} 
+		
+		BinaryTree<T> left = recursiveSearch(t.getLeft(), key); // calls itself-left
+
+		// glue
+		if (left != null){
+			return left;
+
+		}
+
+		BinaryTree<T> right = recursiveSearch(t.getRight(), key); // calls itself-right
+
+		// glue
+		if (right != null){
+			return right;
+
+		} else{
+			return null;
+		}
+
+	
+	}
 
     }
-}
-

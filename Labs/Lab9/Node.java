@@ -1,3 +1,5 @@
+package Labs.Lab9;
+
 public class Node<T>
 {
 	private T data;

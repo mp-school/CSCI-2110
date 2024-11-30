@@ -1,4 +1,4 @@
-
+package Labs.Lab7;
 import java.util.*;
 
 public class Exercise2 {
